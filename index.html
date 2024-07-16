@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>New Phon API Project</title>
+
+</head>
+
+<body>
+    <header>
+        <h2 class="text-4xl font-extrabold">Hunting my Phone</h2>
+    </header>
+    <main>
+        <!-- search button  -->
+        <section>
+            <div class="m-8 p-4 bg-gray-600 rounded-md" >
+               <input id="search-fild" class="p-2 mr-2" type="text" name="" id="" placeholder="search...">
+               <button class="btn btn-active btn-primary" onclick="handelSearch ()">Search</button>
+            </div>
+
+            <!-- data loading  -->
+            <div id="load-data" class="text-center my-52 hidden">
+                <span class="loading loading-spinner text-error"></span>
+            </div>
+            
+        </section>
+            <!-- Detais phone modual section  -->
+            
+        <section>
+            <!-- Open the modal using ID.showModal() method -->
+
+<dialog id="Details_Phone_modal" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <!-- <h3 id="full-phone-name" class="font-bold text-3xl"></h3> -->
+    <div id="show-details-container">
+   
+    </div>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+        </section>
+
+        <section class=" m-10">
+            <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+               
+            </div>
+            <!-- hidden class  -->
+            <div id="show-container" class="hidden text-center my-10">
+                <button class="btn btn-warning" onclick="seeMore()">See More..</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <!-- For JavaScript section  -->
+    <script src="js/phone.js"></script>
+</body>
+
+</html>
